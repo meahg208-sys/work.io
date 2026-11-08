@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Work in Future | Sign In</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="container">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h2>Work in <span>Future</span></h2>
+        </div>
+
+        <!-- HEADING -->
+        <div class="heading">
+            <h1>Welcome Back!</h1>
+            <p>Sign in to your account to continue</p>
+        </div>
+
+        <form class="form" action="#" method="post">
+
+            <!-- FULL NAME -->
+            <div class="input-field">
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                    required
+                    autocomplete="name"
+                    type="text"
+                    name="fullname"
+                    id="username"
+                    placeholder=" "
+                />
+
+                <label for="username">Full Name</label>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="input-field">
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    required
+                    autocomplete="email"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder=" "
+                />
+
+                <label for="email">Email Address</label>
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    required
+                    autocomplete="current-password"
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder=" "
+                />
+
+                <label for="password">Password</label>
+
+                <i class="fa-solid fa-eye passicon"
+                   id="togglePassword"></i>
+            </div>
+
+            <!-- OPTIONS -->
+            <div class="options">
+                <label>
+                    <input type="checkbox" name="remember">
+                    Remember me
+                </label>
+
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <!-- BUTTON -->
+            <button type="submit" class="btn">
+                 <a href="index.html">Sign in</a>
+                   <link rel="sign in" href="index.html">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <!-- REGISTER -->
+            <div class="acc-text">
+                Don't have an account?
+                <a href="register.html">Create Account</a>
+            </div>
+
+        </form>
+
+        <!-- FOOTER -->
+        <div class="footer">
+                <i class="fa-solid fa-house"></i>
+                Back To Home
+                
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    const toggle = document.getElementById("togglePassword");
+    const password = document.getElementById("password");
+
+    toggle.addEventListener("click", function () {
+
+        if (password.type === "password") {
+            password.type = "text";
+            this.classList.replace("fa-eye", "fa-eye-slash");
+        } else {
+            password.type = "password";
+            this.classList.replace("fa-eye-slash", "fa-eye");
+        }
+
+    });
+</script>
+
+</body>
+</html>

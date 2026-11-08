@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register Form</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.title {
+    font-size: 32px;
+    color: #2457d6;
+    font-weight: 700;
+    text-align: center;
+}
+
+.message {
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+}
+
+.form label {
+    position: relative;
+    width: 100%;
+}
+
+.form label .input {
+    width: 100%;
+    padding: 16px 12px;
+    outline: none;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    background: #f9fafc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form label .input:focus {
+    border-color: #2457d6;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(36,87,214,0.1);
+}
+
+.form label .input + span {
+    position: absolute;
+    left: 12px;
+    top: 15px;
+    color: #888;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s;
+    background: transparent;
+}
+
+.form label .input:focus + span,
+.form label .input:not(:placeholder-shown) + span {
+    top: -9px;
+    left: 10px;
+    font-size: 11px;
+    color: #2457d6;
+    background: white;
+    padding: 0 5px;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, #2457d6, #5685ff);
+    padding: 14px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(36,87,214,0.25);
+}
+
+.submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(36,87,214,0.35);
+}
+
+.signin {
+    color: #777;
+    font-size: 14px;
+    text-align: center;
+}
+
+.signin a {
+    color: #2457d6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signin a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 400px) {
+    .form {
+        padding: 30px 20px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<form class="form">
+    <h1 class="title">Create Account</h1>
+
+    <p class="message">
+        Sign up now and get full access to our website.
+    </p>
+
+    <div class="flex">
+        <label>
+            <input required placeholder=" " type="text" class="input">
+            <span>Firstname</span>
+        </label>
+
+        <label>
+            <input required placeholder=" " type="text" class="input">
+            <span>Lastname</span>
+        </label>
+    </div>
+
+    <label>
+        <input required placeholder=" " type="email" class="input">
+        <span>Email Address</span>
+    </label>
+
+    <label>
+        <input required placeholder=" " type="password" class="input">
+        <span>Password</span>
+    </label>
+
+    <label>
+        <input required placeholder=" " type="password" class="input">
+        <span>Confirm Password</span>
+    </label>
+
+    <button class="submit" type="submit">
+        Create Account
+    </button>
+
+    <p class="signin">
+        Already have an account?
+        <a href="login.html">Sign in</a>
+    </p>
+</form>
+
+</body>
+</html>
